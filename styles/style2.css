@@ -1,0 +1,26 @@
+#entrada {
+  clear: both;
+  display: block;
+  font-size: 30px;
+  border-radius: 10px;
+  display: none;
+  width: 5em;
+  height: 3em;
+  outline: none;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+button {
+  font-size: 200%;
+  font-weight: bold;
+  border-radius: 20px;
+  width: 10em;
+  height: 2em;
+  display: block;
+  outline: none;
+}
+
+p#mensagem {
+  font-size: 20px;
+}

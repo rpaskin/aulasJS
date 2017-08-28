@@ -1,0 +1,9 @@
+Desafios:
+- Perguntar o nome do jogador e mostrar na página
+- Limpar o número antes de adivinhar o próximo
+- Mostrar o último número tentado na mensagem
+- Contar o número de tentativas e mostrar
+- Limitar o número de tentativas e mostrar que perdeu se passar desse número
+- Mostrar uma imagem celebratória para o ganhador ou perdedor
+- Mostrar uma lista dos números que já foram tentados
+- Usar a propriedade CSS clip para mostrar uma "forca" ou algo assim da vida do jogador
