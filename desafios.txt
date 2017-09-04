@@ -1,5 +1,5 @@
 Desafios:
-- Perguntar o nome do jogador e mostrar na página
+- Perguntar o nome do jogador e mostrar na página (prompt ou input html)
 - Limpar o número antes de adivinhar o próximo
 - Mostrar o último número tentado na mensagem
 - Contar o número de tentativas e mostrar
