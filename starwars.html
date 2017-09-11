@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Star Wars API</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <link href="styles/starwars.css" rel="stylesheet" type="text/css">
+
+    <script src="scripts/starwars.js"></script>
+
+  </head>
+  <body>
+    <h1>Star Wars</h1>
+
+    <p id="mensagem">Saiba em que filmes a personagem aparece</p>
+    
+    <select id="personagens" onchange="mostrar_filmes">
+      <option farinha="farofa">Luke Skywalker</option>
+      <option>C-3PO</option>
+      <option>R2-D2</option>      
+    </select>
+
+    <ul id="filmes">
+      <li>filme1</li>
+      <li>filme2</li>
+      <li>filme3</li>
+    </ul>
+
+    <p>Crédito: <a href="https://swapi.co/">Star Wars API</a></p>
+    <p>Crédito: <a href="https://developer.mozilla.org/pt-BR/docs/AJAX/Getting_Started/">MDN Ajax Primeiros Passos</a></p>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+#personagens {
+  font-size: 250%;
+  width: 100%;
+}
+
+html {
+  background-image: url('../images/deathstar.jpg');
+  background-size: 100%;
+}
+
+body {
+  background-color: gold;
+  border-color: green;
+}
