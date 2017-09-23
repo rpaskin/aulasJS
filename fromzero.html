@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<script type="text/javascript">
+  		function adiciona_manchete(texto){
+					var manchete = document.createElement("h2");
+					manchete.innerHTML = texto;
+					var bd = document.querySelector("body");
+					bd.appendChild(manchete);
+  		}
+
+  		function adiciona_css_link(url){
+					var link = document.createElement("link");
+					link.setAttribute("href", url);
+					link.setAttribute("rel", "stylesheet");
+					link.setAttribute("type", "text/css");
+
+					var hd = document.querySelector("head");
+					hd.appendChild(link);
+  		}
+
+  		function adiciona_img(url){
+					var im = document.createElement("img");
+					im.setAttribute("src", url);
+					im.setAttribute("height", "300px");
+					var bd = document.querySelector("body");
+					bd.appendChild(im);
+  		}
+
+  		function clicar_tag(tag){
+				var tt = document.querySelector(tag);
+				tt.onclick = function(){
+					trazer_imagem();
+				}
+  		}
+
+// https://developer.mozilla.org/pt-BR/docs/AJAX/Getting_Started
+  		function trazer_imagem() {
+  			var httpRequest = new XMLHttpRequest();
+
+  			httpRequest.onreadystatechange = function(){
+  				if (httpRequest.readyState === 4){
+	  				if (httpRequest.status === 200){
+		  				console.log(httpRequest.responseText);
+		  				var response = JSON.parse(httpRequest.responseText);
+		  				var url = response["url"];
+		  				adiciona_img(url);
+	  				}
+  				}
+  			}
+
+  			httpRequest.open('GET', "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2017-09-"+Math.floor(Math.random()*30+1));
+  			httpRequest.send();
+
+				// console.log(response);
+				// console.log(response["url"]);
+  		}
+
+  		document.onreadystatechange = function(){
+  			if (document.readyState == "complete"){
+  				adiciona_manchete("Mudar Imagem Aqui");
+
+  				adiciona_css_link("styles/style.css");
+
+  				// adiciona_img("images/firefox-icon.png");
+
+  				clicar_tag("h2");
+  			}
+  		} 		
+  	</script>
+  </head>
+  <body>
+  	<h1>Titulo</h1>
+  </body>
+</html>
